@@ -2,7 +2,7 @@
 #include "kernel/stat.h"
 #include "user/user.h"
 
-void prime(int r_fd) {
+void primes(int r_fd) {
   int p[2];
   pipe(p);
 
@@ -13,7 +13,7 @@ void prime(int r_fd) {
 
   if (fork() == 0) {
     close(p[1]);
-    prime(p[0]);
+    primes(p[0]);
     close(p[0]);
   } else {
     close(p[0]);
@@ -35,7 +35,7 @@ main(int argc, char *argv[])
 
   if (fork() == 0) {
     close(p[1]);
-    prime(p[0]);
+    primes(p[0]);
     close(p[0]);
   } else  {
     close(p[0]);
