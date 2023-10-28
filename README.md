@@ -3,7 +3,7 @@
 
 1. [x] [Xv6 and Unix utilities](https://github.com/Primer-Fan/xv6-labs-2023/tree/util)
 2. [x] [system calls](https://github.com/Primer-Fan/xv6-labs-2023/tree/syscall)
-3. [ ] page tables
+3. [x] [page tables](https://github.com/Primer-Fan/xv6-labs-2023/tree/pgtbl)
 4. [ ] traps
 5. [ ] Copy-on-Write Fork for xv6
 6. [ ] Multithreading
