@@ -75,6 +75,28 @@ int
 sys_pgaccess(void)
 {
   // lab pgtbl: your code here.
+  uint64 buf_addr;
+  int len;
+  uint64 mask_addr;
+
+  argaddr(0, &buf_addr);
+  argint(1, &len);
+  argaddr(2, &mask_addr);
+
+  unsigned int mask = 0;
+
+  struct proc *p = myproc();
+  for (int i = 0; i < len; ++i) {
+    pte_t *pte = walk(p->pagetable, buf_addr + PGSIZE * i, 0);
+    if (*pte & PTE_A) {
+      mask |= 1 << i;
+      *pte ^= PTE_A;
+    }
+  }
+
+  if (copyout(p->pagetable, mask_addr, (char *)&mask, sizeof(mask)) < 0)
+    return -1;
+
   return 0;
 }
 #endif
