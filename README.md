@@ -5,7 +5,7 @@
 2. [x] [system calls](https://github.com/Primer-Fan/xv6-labs-2023/tree/syscall)
 3. [x] [page tables](https://github.com/Primer-Fan/xv6-labs-2023/tree/pgtbl)
 4. [x] [traps](https://github.com/Primer-Fan/xv6-labs-2023/tree/traps)
-5. [ ] Copy-on-Write Fork for xv6
+5. [x] [Copy-on-Write Fork for xv6](https://github.com/Primer-Fan/xv6-labs-2023/tree/cow)
 6. [ ] Multithreading
 7. [ ] networking
 8. [ ] locks
