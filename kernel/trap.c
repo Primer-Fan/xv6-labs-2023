@@ -65,6 +65,9 @@ usertrap(void)
     intr_on();
 
     syscall();
+  }else if((r_scause() == 15 || r_scause() == 13) && uvmcheckcow(r_stval())) {
+    if(uvmcowcopy(r_stval()) == -1)
+      setkilled(p);
   } else if((which_dev = devintr()) != 0){
     // ok
   } else {
