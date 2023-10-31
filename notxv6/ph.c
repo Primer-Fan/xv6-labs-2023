@@ -4,6 +4,7 @@
 #include <assert.h>
 #include <pthread.h>
 #include <sys/time.h>
+#include <x86_64-linux-gnu/bits/pthreadtypes.h>
 
 #define NBUCKET 5
 #define NKEYS 100000
@@ -16,7 +17,7 @@ struct entry {
 struct entry *table[NBUCKET];
 int keys[NKEYS];
 int nthread = 1;
-
+pthread_mutex_t lock[NBUCKET];
 
 double
 now()
@@ -41,6 +42,7 @@ void put(int key, int value)
 {
   int i = key % NBUCKET;
 
+  pthread_mutex_lock(&lock[i]);
   // is the key already present?
   struct entry *e = 0;
   for (e = table[i]; e != 0; e = e->next) {
@@ -54,7 +56,7 @@ void put(int key, int value)
     // the new is new.
     insert(key, value, &table[i], table[i]);
   }
-
+  pthread_mutex_unlock(&lock[i]);
 }
 
 static struct entry*
@@ -117,6 +119,9 @@ main(int argc, char *argv[])
   for (int i = 0; i < NKEYS; i++) {
     keys[i] = random();
   }
+
+  for (int i = 0; i < NBUCKET; ++i)
+    pthread_mutex_init(&lock[i], NULL);
 
   //
   // first the puts
