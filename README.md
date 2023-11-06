@@ -9,5 +9,5 @@
 6. [x] [Multithreading](https://github.com/Primer-Fan/xv6-labs-2023/tree/thread)
 7. [ ] networking
 8. [x] [locks](https://github.com/Primer-Fan/xv6-labs-2023/tree/lock)
-9. [ ] file system
+9. [x] [file system](https://github.com/Primer-Fan/xv6-labs-2023/tree/fs)
 10. [ ] mmap
