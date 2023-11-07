@@ -11,3 +11,5 @@
 8. [x] [locks](https://github.com/Primer-Fan/xv6-labs-2023/tree/lock)
 9. [x] [file system](https://github.com/Primer-Fan/xv6-labs-2023/tree/fs)
 10. [x] [mmap](https://github.com/Primer-Fan/xv6-labs-2023/tree/mmap)
+
+参考资料：[Miigon's blog](https://blog.miigon.net/categories/mit6-s081/)
