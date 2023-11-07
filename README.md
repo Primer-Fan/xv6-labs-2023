@@ -12,4 +12,8 @@
 9. [x] [file system](https://github.com/Primer-Fan/xv6-labs-2023/tree/fs)
 10. [x] [mmap](https://github.com/Primer-Fan/xv6-labs-2023/tree/mmap)
 
-参考资料：[Miigon's blog](https://blog.miigon.net/categories/mit6-s081/)
+参考资料：
+- [Miigon's blog](https://blog.miigon.net/categories/mit6-s081/)
+- [tzyt's blog](https://ttzytt.com/categories/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/)
+- [xv6手册与代码笔记](https://www.zhihu.com/column/c_1345025252318007298)
+- [MIT 6.S081 2020 翻译](https://mit-public-courses-cn-translatio.gitbook.io/mit6-s081/)
