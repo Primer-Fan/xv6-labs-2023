@@ -10,4 +10,4 @@
 7. [ ] networking
 8. [x] [locks](https://github.com/Primer-Fan/xv6-labs-2023/tree/lock)
 9. [x] [file system](https://github.com/Primer-Fan/xv6-labs-2023/tree/fs)
-10. [ ] mmap
+10. [x] [mmap](https://github.com/Primer-Fan/xv6-labs-2023/tree/mmap)
